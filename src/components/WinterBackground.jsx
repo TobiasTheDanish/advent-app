@@ -23,7 +23,7 @@ function WinterBackground() {
       <div className="ground">
         <div className="gift-wrapper" onClick={enableGiftCard}>
           <div className="shadow"></div>
-          <img className="gift-img" src="src/assets/gave-billede.png" />
+          <img className="gift-img" src="gave-billed.png" />
         </div>
       </div>
       {showGiftCard && <GiftCard onClick={hideGiftCard} />}

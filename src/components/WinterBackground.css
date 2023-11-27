@@ -1,0 +1,155 @@
+.winter-background {
+    display: flex;
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+    z-index: -1;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.welcome-text-wrapper {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    color: #2a2a2a;
+    background-color: #cee2e6;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px 1px #838383;
+    padding: 16px 24px;
+}
+
+.welcome-text-wrapper > * {
+    margin: 0;
+}
+
+.trees {
+	background: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/25839/trees.svg) repeat-x;
+	position: relative;
+	height: 500px;
+    min-width: 700px;
+    flex: 2;
+}
+
+.ground {
+    flex: 1;
+    position: relative;
+}
+
+.gift-wrapper {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 10%;
+    left: 50%;
+    width: min-content;
+    height: min-content;
+    z-index: 2;
+}
+
+.gift-wrapper:hover, .gift-img:hover {
+    cursor: pointer;
+}
+
+.gift-img {
+    position: relative;
+    width: 140px;
+    animation: gift-animation 2s ease-in-out infinite;
+}
+
+@keyframes gift-animation {
+    0% {top: 0px;}
+    50% {top: -15px;}
+    100% {top: 0px;}
+}
+
+.shadow {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 67%;
+    left: 50%;
+    background-color: black;
+    opacity: 0.3;
+    border-radius: 100%;
+    z-index: -1;
+    animation: shadow-animation 2s ease-in-out infinite;
+}
+
+@keyframes shadow-animation {
+    0% {width: 78px; height: 65px;}
+    50% {width: 70px; height: 50px;}
+    100% {width: 78px; height: 65px;}
+}
+
+.card {
+    background-color: #cee2e6;
+    color: #000000ff;
+    border-radius: 16px;
+    padding: 24px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+    animation: card-entry 1s ease-out;
+    min-width: 200px;
+    box-shadow: 0px 0px 5px 1px #838383;
+}
+
+@keyframes card-entry {
+    0% {top:100%; transform: translate(-50%, 0%); color: #00000000;}
+    90% {color: #00000000;}
+    100% {top:50%; transform: translate(-50%, -50%); color: #000000ff}
+}
+
+.card-title {
+    margin: 8px 8px 4px;
+    text-decoration: underline;
+}
+
+.card-title > h2 {
+    margin-top: 0;
+}
+
+.card-body {
+    margin: 4px 8px 8px;
+    font-size: 1rem;
+}
+
+.obs {
+    margin-top: 30px !important;
+    font-size: 0.9rem;
+}
+
+.paren {
+    font-weight: lighter;
+    font-size: 0.9rem;
+}
+
+.card-body > p {
+    margin: 0;
+    margin-bottom: 4px;
+}
+
+.emphasize {
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 376px) {
+    .card {
+        min-width: 180px;
+    }
+    .card-body {
+        font-size: 0.9rem;
+    }
+    .obs {
+        font-size: 0.8rem;
+    }
+    .paren {
+        font-size: 0.8rem;
+    }
+}
